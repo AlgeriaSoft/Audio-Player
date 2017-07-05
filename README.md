@@ -19,7 +19,10 @@
     <a href="https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies">
       <img src="https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg" alt="devDependency Status badge">
     </a>
-   [![Join the chat at https://gitter.im/Audio-Player/Lobby](https://badges.gitter.im/Audio-Player/Lobby.svg)](https://gitter.im/Audio-Player/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+     <a href="https://gitter.im/Audio-Player/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
+        <img src="https://badges.gitter.im/Audio-Player/Lobby.svg" alt="gitter badge">
+    </a>
+
 </p>
   
 ## Table of Contents
