@@ -1,0 +1,27 @@
+{
+    "name": "AudioPlayer",
+    "version": "1.0.0",
+    "description": "A audio player is a computer program for playing audio files like mp3 && ogg",
+    "author": "KHALED LAKEHEL <algeria-dev-2016@homtail.com>",
+    "keywords": [],
+    "cpu": [
+        "x64",
+        "ia32"
+    ],
+    "os": [
+        "darwin",
+        "linux",
+        "win32"
+    ],
+    "main": "index.js",
+    "bin": {},
+    "engines": {
+        "node": ">=8.1.2"
+    },
+    "private": true,
+    "analyze": true,
+    "license": "MIT",
+    "dependencies": {
+        "node-ffprobe": "^1.2.2"
+    }
+}
