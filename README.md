@@ -10,7 +10,7 @@
     <a href=""><strong>-- Download App --</strong></a>
     <br>
     <br>
-    <a href="https://travis-ci.org/AlgeriaSoft/materialize">
+    <a href="https://travis-ci.org/Audio-Player">
       <img src="https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master" alt="Travis CI badge">
     </a>
     <a href="https://david-dm.org/AlgeriaSoft/Audio-Player">
