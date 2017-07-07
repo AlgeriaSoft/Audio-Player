@@ -8,7 +8,7 @@
 <p align="center">
     <br>
     <br>
-    <a href="https://travis-ci.org/Audio-Player">
+    <a href="https://travis-ci.org/AlgeriaSoft/Audio-Player">
       <img src="https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master" alt="Travis CI badge">
     </a>
     <a href="https://david-dm.org/AlgeriaSoft/Audio-Player">
