@@ -109,7 +109,6 @@ a.btn.is-played i.material-icons {
 .player-header .input-field input[type=search]:focus {
     box-shadow: none;
     color: var(--white);
-    /* border: 0 !important; */
     background: transparent;
 }
 
@@ -128,21 +127,23 @@ a.btn.is-played i.material-icons {
 }
 
 .player-body .player-cover img {
-    height: var(--player-cover-height);
-    /*     background: url(../../image.jpg) 50% 50% no-repeat;
-    background-size: cover; */
     transform: scale(1, 1);
     transform-origin: 0% 0%;
+    height: var(--player-cover-height);
 }
 
-.player-body .player-header {
+.player-body .player-audio-header {
+    overflow: hidden;
+    padding: 15px 60px;
     transition: all 0.3s ease-in;
 }
 
 .player-body .player-audio-title,
 .player-body .player-audio-info {
-    color: var(--white);
+    overflow: hidden;
     text-align: center;
+    color: var(--white);
+    text-overflow: ellipsis;
     font-variant: small-caps;
     transition: all 0.3s ease-in;
 }
@@ -198,28 +199,6 @@ a.btn.is-played i.material-icons {
     box-shadow: 0 0 0 6px hsla(0, 0%, 100%, .2);
 }
 
-
-/* .player-body .player-audio-seek .currentTime-tooltip {
-    position: absolute;
-    bottom: 120%;
-    border: 1px solid transparent;
-    padding: 5px;
-    text-align: center;
-}
-
-.player-body .player-audio-seek .currentTime-tooltip span {
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    font-size: 12px;
-    position: absolute;
-    left: -1px;
-    transition: opacity .25s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-} */
-
-
-/* .player-body .player-audio-seek .currentTime-tooltip, */
-
 .player-body .player-audio-seek .audio-seek .noUi-target.noUi-horizontal .noUi-tooltip {
     left: -47px;
     height: 24px;
@@ -244,12 +223,6 @@ a.btn.is-played i.material-icons {
     top: 5px;
     transform: none;
 }
-
-
-/* .player-body .player-audio-seek .currentTime-tooltip span::after, */
-
-
-/* .player-body .player-audio-seek .currentTime-tooltip span::before, */
 
 .player-body .player-audio-seek .audio-seek .noUi-target.noUi-horizontal .noUi-tooltip span::after,
 .player-body .player-audio-seek .audio-seek .noUi-target.noUi-horizontal .noUi-tooltip span::before {
@@ -285,7 +258,7 @@ a.btn.is-played i.material-icons {
     line-height: var(--player-body-btn-height);
 }
 
-.player-body .fixed-action-btn{
+.player-body .fixed-action-btn {
     bottom: 50px;
     display: none;
 }
@@ -312,7 +285,8 @@ a.btn.is-played i.material-icons {
 }
 
 .player-body .player-tracks {
-    padding: 15px;
+    padding: 15px 0;
+    overflow-x: hidden;
     overflow-y: scroll;
     transform-origin: 0% 0%;
     transform: scale(0.1, 0.1);
@@ -321,6 +295,7 @@ a.btn.is-played i.material-icons {
 
 .player-body .player-tracks table {
     color: var(--white);
+    table-layout: fixed;
 }
 
 .player-body .player-tracks table i.material-icons {
@@ -339,22 +314,22 @@ a.btn.is-played i.material-icons {
 }
 
 .player-body .player-tracks table td:nth-child(1) {
-    width: 16px;
+    width: 50px;
 }
 
 .player-body .player-tracks table td:nth-child(2) {
-    text-align: left;
-    text-indent: 10px;
-    width: calc(100% - (16px + 40px + 40px + 43px));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - (50px + 100px + 50px + 50px));
 }
 
 .player-body .player-tracks table td:nth-child(3) {
-    width: 43px;
+    width: 100px;
 }
 
 .player-body .player-tracks table td:nth-child(4),
 .player-body .player-tracks table td:nth-child(5) {
-    width: 40px;
+    width: 50px;
 }
 
 .player-body .player-tracks table td:nth-child(4) i.material-icons,
@@ -406,8 +381,10 @@ a.btn.is-played i.material-icons {
 }
 
 .player.active-list .player-audio-header {
-    top: 18px;
+    top: 20px;
+    padding: 0;
     left: 180px;
+    width: 150px;
     position: absolute;
     transition: all 0.3s ease-in;
 }
@@ -438,9 +415,11 @@ a.btn.is-played i.material-icons {
     padding: 0;
     width: var(--player-body-btn-height);
 }
-.player.active-list .player-body .fixed-action-btn{
+
+.player.active-list .player-body .fixed-action-btn {
     display: block;
 }
+
 .player.active-list .player-footer a.btn:nth-child(5) {
     right: 0;
     bottom: 0;

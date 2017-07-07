@@ -40,7 +40,7 @@ export default class TimeDate {
     static getTimeStamp(t) {
         if (Validator.checkValueType(t, 'STRING', 'Time value')) {
             t = t.split(':');
-            if (t.length === 3) return Number(t[0]) * 60 + Number(t[1]) * 60 + Number(t[2]);
+            if (t.length === 3) return Number(t[0]) * 3600 + Number(t[1]) * 60 + Number(t[2]);
             else return Number(t[0]) * 60 + Number(t[1]);
         }
     }

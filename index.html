@@ -58,13 +58,13 @@
                 <audio id='audio' :src='currentTrack.path' class='hide'></audio>
                 <div class='player-body-inner'>
                     <div class='player-cover'>
-                        <img src='image.jpg'>
+                        <img src='assets/multimedia/images/tracks/image.jpg'>
                     </div>
                     <div class='row clearfix'></div>
                     <div class='row clearfix'></div>
                     <div class='player-audio-header'>
                         <h5 class='player-audio-title'>{{currentTrack.title}}</h5>
-                        <h6 class='player-audio-info'>{{currentTrack.artist}} - {{currentTrack.year}}</h6>
+                        <h6 class='player-audio-info'>{{currentTrack.info}}</h6>
                     </div>
                     <div class='row clearfix'></div>
                     <div class='row clearfix'></div>
@@ -101,14 +101,14 @@
                         <table class='centered highlight'>
                             <tbody>
                                 <tr v-for='track in tracks'>
-                                    <td>{{track.id}}</td>
+                                    <td>{{getId(track.path)}}</td>
                                     <td>{{track.title}}</td>
                                     <td>{{track.duration}}</td>
-                                    <td v-on:click='toggleFavorite(track.path)'>
-                                        <i v-if='track.favorite' class='material-icons'>favorite</i>
-                                        <i v-else class='material-icons'>favorite_border</i>
+                                    <td>
+                                        <i v-if='track.favorite' class='material-icons' v-on:click='toggleFavorite(track.path)'>favorite</i>
+                                        <i v-else class='material-icons' v-on:click='toggleFavorite(track.path)'>favorite_border</i>
                                     </td>
-                                    <td v-on:click='deleteSong(track.path)'><i class='material-icons'>clear</i></td>
+                                    <td><i class='material-icons' v-on:click='deleteSong(track.path)'>clear</i></td>
                                 </tr>
                             </tbody>
                         </table>

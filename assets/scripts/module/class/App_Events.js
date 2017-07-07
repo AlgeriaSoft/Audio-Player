@@ -19,7 +19,6 @@ class App_Events {
             data: {
                 trackId: 0,
                 tracks: [],
-                audio: null,
                 progress: null,
                 isLoaded: false,
                 isPlaying: false,
@@ -29,9 +28,8 @@ class App_Events {
                 currentTrack: {
                     path: '',
                     title: '',
-                    artist: '',
                     image: '',
-                    year: ''
+                    info: ''
                 }
             },
             created: function() {
@@ -41,19 +39,16 @@ class App_Events {
                     this.currentTrack.id = this.tracks[0].id;
                     this.currentTrack.path = this.tracks[0].path;
                     this.currentTrack.title = this.tracks[0].title;
-                    this.currentTrack.artist = this.tracks[0].artist;
-                    this.currentTrack.year = this.tracks[0].year;
+                    this.currentTrack.image = this.tracks[0].image;
+                    this.currentTrack.info = this.tracks[0].artist === '' && this.tracks[0].year === '' ? '' : this.tracks[0].artist === '' ? this.tracks[0].year : this.tracks[0].year === '' ? this.tracks[0].artist : `${this.tracks[0].artist}  -   ${this.tracks[0].year}`
                 }
-                $('#audio').bind('timeupdate', function() {
-                    vue.progress[0].noUiSlider.set($('#audio')[0].currentTime);
-                    vue.currentTime = TimeDate.buildTimer1($('#audio')[0].currentTime);
-                });
             },
             mounted: function() {
                 let vue = this;
-                noUiSlider.create($('#audio-seek-range')[0], {
+                this.progress = $('#audio-seek-range');
+                noUiSlider.create(this.progress[0], {
                     start: 0,
-                    behaviour: 'hover-tap',
+                    behaviour: 'snap',
                     connect: [true, false],
                     step: 1,
                     range: {
@@ -68,15 +63,11 @@ class App_Events {
                         from: Number
                     }
                 });
-                this.progress = $('#audio-seek-range');
                 this.progress[0].noUiSlider.on('slide', function(value) {
                     this.currentTime = value[0];
                     $('#audio')[0].currentTime = TimeDate.getTimeStamp(value[0]);
                     this.progress[0].noUiSlider.set(TimeDate.getTimeStamp(value[0]));
                 }.bind(this));
-                this.progress[0].noUiSlider.on('hover', function(value) {
-                    vue.currentTimetooltip = TimeDate.buildTimer1(value);
-                });
                 this.progress.attr('disabled', true);
             },
             methods: {
@@ -89,6 +80,11 @@ class App_Events {
                 search: function() {
 
                 },
+                getId: function(id) {
+                    return this.tracks.findIndex(track => {
+                        return track.path === id
+                    });
+                },
                 add: function() {
                     let tracks = self.electron.dialog.showOpenDialog(self.electron.getCurrentWindow(), {
                         title: 'Choose your tracks',
@@ -98,35 +94,44 @@ class App_Events {
                         ],
                         properties: ['openFile', 'showHiddenFiles', 'multiSelections']
                     });
-                    let fs = require('fs');
-                    let probe = require('child_process').spawnSync;
-                    for (let i = 0; i < tracks.length; i++) {
-                        let vue = this,
-                            index = vue.tracks.findIndex(track => {
-                                return track.path === tracks[i]
-                            });
-                        if (index === -1) {
-                            let data = JSON.parse(probe(self.path.join(__dirname, 'ffprobe'), ['-v', 'quiet', '-print_format', 'json', '-show_format', tracks[i]], {
-                                encoding: 'utf8'
-                            }).stdout);
-                            console.log(data);
-                            vue.tracks.push({
-                                title: typeof data.format.tags.title === 'undefined' ? self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), '') : data.format.tags.title,
-                                artist: typeof data.format.tags.artist === 'undefined' ? '' : data.format.tags.artist,
-                                year: typeof data.format.tags.date === 'undefined' ? '' : data.format.tags.date,
-                                favorite: false,
-                                duration: TimeDate.buildTimer1(Number(data.format.duration)),
-                                image: typeof data.format.tags.picture === 'undefined' ? '' : data.format.tags.picture,
-                                path: tracks[i]
-                            });
-                            if (i === 0) {
-                                vue.currentTrack = {
-                                    path: vue.tracks[0].path,
-                                    title: vue.tracks[0].title,
-                                    artist: vue.tracks[0].artist,
-                                    image: vue.tracks[0].picture,
-                                    year: vue.tracks[0].year
-                                };
+                    if (typeof tracks !== 'undefined') {
+                        let fs = require('fs');
+                        let probe = require('child_process').spawnSync;
+                        for (let i = 0; i < tracks.length; i++) {
+                            let vue = this,
+                                index = vue.tracks.findIndex(track => {
+                                    return track.path === tracks[i]
+                                });
+                            if (index === -1) {
+                                let data = JSON.parse(probe(self.path.join(__dirname, 'tools/ffprobe'), ['-v', 'quiet', '-print_format', 'json', '-show_format', tracks[i]], {
+                                    encoding: 'utf8'
+                                }).stdout).format;
+                                if (!('tags' in data)) vue.tracks.push({
+                                    title: self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), ''),
+                                    artist: '',
+                                    year: '',
+                                    favorite: false,
+                                    duration: TimeDate.buildTimer1(Number(data.duration)),
+                                    image: '',
+                                    path: tracks[i]
+                                });
+                                else vue.tracks.push({
+                                    title: 'title' in data.tags ? data.tags.title : self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), ''),
+                                    artist: 'artist' in data.tags ? data.tags.artist : '',
+                                    year: 'date' in data.tags ? data.tags.date : '',
+                                    favorite: false,
+                                    duration: TimeDate.buildTimer1(Number(data.duration)),
+                                    image: 'picture' in data.tags ? data.tags.picture : '',
+                                    path: tracks[i]
+                                });
+                                if (i === 0 && vue.currentTrack.path.length === 0) {
+                                    vue.currentTrack = {
+                                        path: vue.tracks[0].path,
+                                        title: vue.tracks[0].title,
+                                        image: vue.tracks[0].picture,
+                                        info: vue.tracks[0].artist === '' && vue.tracks[0].year === '' ? '' : vue.tracks[0].artist === '' ? vue.tracks[0].year : vue.tracks[0].year === '' ? vue.tracks[0].artist : `${vue.tracks[0].artist}  -   ${vue.tracks[0].year}`
+                                    };
+                                }
                             }
                         }
                     }
@@ -136,6 +141,13 @@ class App_Events {
                 },
                 clearAll: function() {
                     this.tracks = [];
+                    this.stop();
+                    this.currentTrack = {
+                        path: '',
+                        title: '',
+                        image: '',
+                        info: ''
+                    }
                 },
                 toggleActiveList: function(e) {
                     $('#player').toggleClass('active-list');
@@ -145,6 +157,15 @@ class App_Events {
                     let index = this.tracks.findIndex(track => {
                         return track.path === id
                     });
+                    if (this.currentTrack.path === this.tracks[index].path) {
+                        this.stop();
+                        this.currentTrack = {
+                            path: '',
+                            title: '',
+                            image: '',
+                            info: ''
+                        }
+                    }
                     this.tracks.splice(index, 1);
                 },
                 toggleFavorite: function(id) {
@@ -174,6 +195,10 @@ class App_Events {
                                     'max': $('#audio')[0].duration
                                 }
                             });
+                            $('#audio').bind('timeupdate', function(e) {
+                                this.currentTime = TimeDate.buildTimer1($(e.currentTarget)[0].currentTime);
+                                this.progress[0].noUiSlider.set($(e.currentTarget)[0].currentTime);
+                            }.bind(this));
                             this.audioDuration = TimeDate.buildTimer1($('#audio')[0].duration);
                         }
                     } else {
