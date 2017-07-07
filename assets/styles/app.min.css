@@ -127,10 +127,10 @@ a.btn.is-played i.material-icons {
     height: var(--player-cover-height);
 }
 
-.player-body .player-cover div {
+.player-body .player-cover img {
     height: var(--player-cover-height);
-    background: url(../../image.jpg) 50% 50% no-repeat;
-    background-size: cover;
+    /*     background: url(../../image.jpg) 50% 50% no-repeat;
+    background-size: cover; */
     transform: scale(1, 1);
     transform-origin: 0% 0%;
 }
@@ -285,32 +285,38 @@ a.btn.is-played i.material-icons {
     line-height: var(--player-body-btn-height);
 }
 
-.player-body .player-tracks {
-    padding: 15px;
-    transform-origin: 0% 0%;
-    transform: scale(0.1, 0.1);
-    transition: all 0.3s ease-in;
+.player-body .fixed-action-btn{
+    bottom: 50px;
+    display: none;
 }
 
-.player-body .player-tracks .fixed-action-btn .btn-floating {
+.player-body .fixed-action-btn .btn-floating {
     background-color: var(--red-1);
 }
 
-.player-body .player-tracks .fixed-action-btn .btn-floating i.material-icons {
+.player-body .fixed-action-btn .btn-floating i.material-icons {
     font-size: 1.3rem;
 }
 
-.player-body .player-tracks .fixed-action-btn ul {
+.player-body .fixed-action-btn ul {
     bottom: 45px;
 }
 
-.player-body .player-tracks .fixed-action-btn ul .btn-floating {
+.player-body .fixed-action-btn ul .btn-floating {
     width: 35px;
     height: 35px;
 }
 
-.player-body .player-tracks .fixed-action-btn ul .btn-floating i.material-icons {
+.player-body .fixed-action-btn ul .btn-floating i.material-icons {
     line-height: 35px;
+}
+
+.player-body .player-tracks {
+    padding: 15px;
+    overflow-y: scroll;
+    transform-origin: 0% 0%;
+    transform: scale(0.1, 0.1);
+    transition: all 0.3s ease-in;
 }
 
 .player-body .player-tracks table {
@@ -392,7 +398,7 @@ a.btn.is-played i.material-icons {
     height: 110px;
 }
 
-.player.active-list .player-cover div {
+.player.active-list .player-cover img {
     border-radius: 20%;
     transform-origin: 10% 10%;
     transform: scale(0.251, 0.3);
@@ -401,7 +407,7 @@ a.btn.is-played i.material-icons {
 
 .player.active-list .player-audio-header {
     top: 18px;
-    left: 140px;
+    left: 180px;
     position: absolute;
     transition: all 0.3s ease-in;
 }
@@ -432,7 +438,9 @@ a.btn.is-played i.material-icons {
     padding: 0;
     width: var(--player-body-btn-height);
 }
-
+.player.active-list .player-body .fixed-action-btn{
+    display: block;
+}
 .player.active-list .player-footer a.btn:nth-child(5) {
     right: 0;
     bottom: 0;
@@ -462,7 +470,7 @@ a.btn.is-played i.material-icons {
     position: absolute;
     transform: scale(1, 1);
     transition: all 0.3s ease-in;
-    height: calc(100% - (110px + var(--player-body-btn-height)));
+    height: calc(100% - (110px + var(--player-body-btn-height) + 55px));
 }
 
 .player.active-list .player-tracks a.btn {

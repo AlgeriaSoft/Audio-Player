@@ -107,10 +107,11 @@ class App_Events {
                                 return track.path === tracks[i]
                             });
                             if (index === -1) {
+                                console.log(data);
                                 vue.tracks.push({
                                     title: typeof data.metadata.title === 'undefined' ? self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), '') : data.metadata.title,
                                     artist: typeof data.metadata.artist === 'undefined' ? '' : data.metadata.artist,
-                                    year: typeof data.metadata.year === 'undefined' ? '' : data.metadata.year,
+                                    year: typeof data.metadata.date === 'undefined' ? '' : data.metadata.date,
                                     favorite: false,
                                     duration: TimeDate.buildTimer1(data.format.duration),
                                     image: typeof data.metadata.picture === 'undefined' ? '' : data.metadata.picture,
