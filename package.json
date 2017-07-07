@@ -21,7 +21,5 @@
     "private": true,
     "analyze": true,
     "license": "MIT",
-    "dependencies": {
-        "node-ffprobe": "^1.2.2"
-    }
+    "dependencies": {}
 }

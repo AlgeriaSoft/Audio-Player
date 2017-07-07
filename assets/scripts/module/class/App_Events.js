@@ -99,35 +99,36 @@ class App_Events {
                         properties: ['openFile', 'showHiddenFiles', 'multiSelections']
                     });
                     let fs = require('fs');
-                    let probe = require('node-ffprobe');
+                    let probe = require('child_process').spawnSync;
                     for (let i = 0; i < tracks.length; i++) {
-                        let vue = this;
-                        probe(tracks[i], function(err, data) {
-                            let index = vue.tracks.findIndex(track => {
+                        let vue = this,
+                            index = vue.tracks.findIndex(track => {
                                 return track.path === tracks[i]
                             });
-                            if (index === -1) {
-                                console.log(data);
-                                vue.tracks.push({
-                                    title: typeof data.metadata.title === 'undefined' ? self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), '') : data.metadata.title,
-                                    artist: typeof data.metadata.artist === 'undefined' ? '' : data.metadata.artist,
-                                    year: typeof data.metadata.date === 'undefined' ? '' : data.metadata.date,
-                                    favorite: false,
-                                    duration: TimeDate.buildTimer1(data.format.duration),
-                                    image: typeof data.metadata.picture === 'undefined' ? '' : data.metadata.picture,
-                                    path: tracks[i]
-                                });
-                                if (i === 0) {
-                                    vue.currentTrack = {
-                                        path: vue.tracks[0].path,
-                                        title: vue.tracks[0].title,
-                                        artist: vue.tracks[0].artist,
-                                        image: vue.tracks[0].picture,
-                                        year: vue.tracks[0].year
-                                    };
-                                }
+                        if (index === -1) {
+                            let data = JSON.parse(probe(self.path.join(__dirname, 'ffprobe'), ['-v', 'quiet', '-print_format', 'json', '-show_format', tracks[i]], {
+                                encoding: 'utf8'
+                            }).stdout);
+                            console.log(data);
+                            vue.tracks.push({
+                                title: typeof data.format.tags.title === 'undefined' ? self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), '') : data.format.tags.title,
+                                artist: typeof data.format.tags.artist === 'undefined' ? '' : data.format.tags.artist,
+                                year: typeof data.format.tags.date === 'undefined' ? '' : data.format.tags.date,
+                                favorite: false,
+                                duration: TimeDate.buildTimer1(Number(data.format.duration)),
+                                image: typeof data.format.tags.picture === 'undefined' ? '' : data.format.tags.picture,
+                                path: tracks[i]
+                            });
+                            if (i === 0) {
+                                vue.currentTrack = {
+                                    path: vue.tracks[0].path,
+                                    title: vue.tracks[0].title,
+                                    artist: vue.tracks[0].artist,
+                                    image: vue.tracks[0].picture,
+                                    year: vue.tracks[0].year
+                                };
                             }
-                        });
+                        }
                     }
                 },
                 save: function() {
