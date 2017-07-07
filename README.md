@@ -7,8 +7,6 @@
 
 <p align="center">
     <br>
-    <a href=""><strong>-- Download App --</strong></a>
-    <br>
     <br>
     <a href="https://travis-ci.org/Audio-Player">
       <img src="https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master" alt="Travis CI badge">
@@ -28,6 +26,7 @@
 ## Table of Contents
 
 - [Quickstart](#Quickstart)
+- [Downloads](#Downloads)
 - [Copyright and license](#copyright-and-license)
 
 
@@ -35,7 +34,9 @@
 Electron audio player with play list v1.0.0
 
 
+## Downloads
 
+Download the latest build from the [official download site](https://algeriasoft.github.io/Website/audio-player/download.html).
 
 
 ## Copyright and license
