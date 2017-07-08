@@ -95,35 +95,25 @@ class App_Events {
                         properties: ['openFile', 'showHiddenFiles', 'multiSelections']
                     });
                     if (typeof tracks !== 'undefined') {
-                        let fs = require('fs');
-                        let probe = require('child_process').spawnSync;
+                        let musicmetadata = require('music-metadata');
                         for (let i = 0; i < tracks.length; i++) {
                             let vue = this,
                                 index = vue.tracks.findIndex(track => {
                                     return track.path === tracks[i]
                                 });
                             if (index === -1) {
-                                let data = JSON.parse(probe(self.path.join(__dirname, 'tools/ffprobe'), ['-v', 'quiet', '-print_format', 'json', '-show_format', tracks[i]], {
-                                    encoding: 'utf8'
-                                }).stdout).format;
-                                if (!('tags' in data)) vue.tracks.push({
-                                    title: self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), ''),
-                                    artist: '',
-                                    year: '',
-                                    favorite: false,
-                                    duration: TimeDate.buildTimer1(Number(data.duration)),
-                                    image: '',
-                                    path: tracks[i]
-                                });
-                                else vue.tracks.push({
-                                    title: 'title' in data.tags ? data.tags.title : self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), ''),
-                                    artist: 'artist' in data.tags ? data.tags.artist : '',
-                                    year: 'date' in data.tags ? data.tags.date : '',
-                                    favorite: false,
-                                    duration: TimeDate.buildTimer1(Number(data.duration)),
-                                    image: 'picture' in data.tags ? data.tags.picture : '',
-                                    path: tracks[i]
-                                });
+                                musicmetadata.parseFile(tracks[i], { duration: true })
+                                    .then(function(data) {
+                                        vue.tracks.push({
+                                            title: 'title' in data.common ? data.common.title : self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), ''),
+                                            artist: 'artist' in data.common ? data.common.artist : '',
+                                            year: 'date' in data.common ? data.common.year : '',
+                                            favorite: false,
+                                            duration: TimeDate.buildTimer1(Number(data.duration)),
+                                            image: 'picture' in data.common ? data.common.picture : '',
+                                            path: tracks[i]
+                                        });
+                                    });
                                 if (i === 0 && vue.currentTrack.path.length === 0) {
                                     vue.currentTrack = {
                                         path: vue.tracks[0].path,

@@ -20,6 +20,9 @@
     },
     "private": true,
     "analyze": true,
-    "license": "MIT",
-    "dependencies": {}
+    "license": "AGPLV3.0",
+    "dependencies": {
+        "jsmediatags": "^3.6.1",
+        "music-metadata": "^0.7.3"
+    }
 }

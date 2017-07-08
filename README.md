@@ -26,12 +26,21 @@
 ## Table of Contents
 
 - [Quickstart](#Quickstart)
+- [Features](#Features)
 - [Downloads](#Downloads)
 - [Copyright and license](#copyright-and-license)
 
 
 ## Quickstart:
 Electron audio player with play list v1.0.0
+
+## Features:
+| Feature                | Status       | Notes                             |
+|-----------------------:|-------------:|----------------------------------:|
+| Read mp3 metadata      | 100%         | All planned features implemented. |
+| Audio Visualization    | 0%           |                                   |
+| Player list            | 80%          | Read picture tag && play list with loop && random. |
+  
 
 
 ## Downloads
