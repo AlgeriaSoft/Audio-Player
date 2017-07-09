@@ -42,6 +42,20 @@ class App_Events {
                     this.currentTrack.image = this.tracks[0].image;
                     this.currentTrack.info = this.tracks[0].artist === '' && this.tracks[0].year === '' ? '' : this.tracks[0].artist === '' ? this.tracks[0].year : this.tracks[0].year === '' ? this.tracks[0].artist : `${this.tracks[0].artist}  -   ${this.tracks[0].year}`
                 }
+                let song;
+
+                // function preload() {
+                //     // song = loadSound();
+                // }
+
+                function setup() {
+                    console.log('sadasd')
+                    createCanvas($('#canvas-container').width(), $('#canvas-container').height());
+                }
+
+                function draw() {
+                    background(255);
+                }
             },
             mounted: function() {
                 let vue = this;
@@ -139,7 +153,7 @@ class App_Events {
                                                     vue.currentTrack = {
                                                         path: vue.tracks[0].path,
                                                         title: vue.tracks[0].title,
-                                                        image:  vue.tracks[0].image,
+                                                        image: vue.tracks[0].image,
                                                         info: ''
                                                     };
                                                 }

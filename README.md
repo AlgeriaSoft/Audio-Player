@@ -37,9 +37,9 @@ Electron audio player with play list v1.0.0
 ## Features:
 | Feature                | Status        | Notes                             |
 |:-----------------------|:-------------:|:----------------------------------|
-| Read mp3 metadata      | 100%          | All planned features implemented. |
+| Read mp3 metadata      | 100%          | All planned feature implemented.  |
 | Audio Visualization    | 0%            |                                   |
-| Player list            | 90%           | Play list with loop && random. |
+| Player list            | 90%           | Play list with loop && random.    |
   
 
 

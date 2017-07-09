@@ -15,6 +15,9 @@
     <script src='assets/vendor/jquery/jquery.min.js'></script>
     <script src='assets/vendor/materialize/js/materialize.min.js'></script>
     <script src='assets/vendor/noUiSlider/nouislider.min.js'></script>
+    <script src='assets/vendor/p5/p5.min.js'></script>
+    <script src='assets/vendor/p5/addons/p5.dom.min.js'></script>
+    <script src='assets/vendor/p5/addons/p5.sound.min.js'></script>
     <script src='assets/vendor/vue.min.js'></script>
     <script src='assets/scripts/config.min.js'></script>
     <script src='assets/scripts/module/app.min.js'></script>
@@ -58,7 +61,8 @@
                 <audio id='audio' :src='currentTrack.path' class='hide'></audio>
                 <div class='player-body-inner'>
                     <div class='player-cover'>
-                        <div v-bind:style='{ "background-image": "url(" + currentTrack.image + ")"}'></div>
+                        <div class='background hide' v-bind:style='{ "background-image": "url(" + currentTrack.image + ")"}'></div>
+                        <div id='canvas-container' class='canvas-container'></div>
                     </div>
                     <div class='row clearfix'></div>
                     <div class='row clearfix'></div>
