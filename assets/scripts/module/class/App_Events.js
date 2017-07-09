@@ -95,7 +95,8 @@ class App_Events {
                         properties: ['openFile', 'showHiddenFiles', 'multiSelections']
                     });
                     if (typeof tracks !== 'undefined') {
-                        let musicmetadata = require('music-metadata');
+                        let musicmetadata = require('music-metadata'),
+                            jsmediatags = require('jsmediatags');
                         for (let i = 0; i < tracks.length; i++) {
                             let vue = this,
                                 index = vue.tracks.findIndex(track => {
@@ -104,24 +105,47 @@ class App_Events {
                             if (index === -1) {
                                 musicmetadata.parseFile(tracks[i], { duration: true })
                                     .then(function(data) {
-                                        vue.tracks.push({
-                                            title: 'title' in data.common ? data.common.title : self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), ''),
-                                            artist: 'artist' in data.common ? data.common.artist : '',
-                                            year: 'date' in data.common ? data.common.year : '',
-                                            favorite: false,
-                                            duration: TimeDate.buildTimer1(Number(data.duration)),
-                                            image: 'picture' in data.common ? data.common.picture : '',
-                                            path: tracks[i]
+                                        jsmediatags.read(tracks[i], {
+                                            onSuccess: function(tag) {
+                                                vue.tracks.push({
+                                                    title: 'title' in tag.tags ? tag.tags.title : self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), ''),
+                                                    artist: 'artist' in tag.tags ? tag.tags.artist : '',
+                                                    year: 'date' in tag.tags ? tag.tags.year : '',
+                                                    favorite: false,
+                                                    duration: TimeDate.buildTimer1(Number(data.format.duration)),
+                                                    image: 'picture' in tag.tags ? `data:${tag.tags.picture.format};base64,${new Buffer(tag.tags.picture.data).toString('base64')}` : 'assets/multimedia/images/tracks/image.jpg',
+                                                    path: tracks[i]
+                                                });
+                                                if (i === 0 && vue.currentTrack.path.length === 0) {
+                                                    vue.currentTrack = {
+                                                        path: vue.tracks[0].path,
+                                                        title: vue.tracks[0].title,
+                                                        image: vue.tracks[0].image,
+                                                        info: vue.tracks[0].artist === '' && vue.tracks[0].year === '' ? '' : vue.tracks[0].artist === '' ? vue.tracks[0].year : vue.tracks[0].year === '' ? vue.tracks[0].artist : `${vue.tracks[0].artist}  -   ${vue.tracks[0].year}`
+                                                    };
+                                                }
+                                            },
+                                            onError: function(error) {
+                                                vue.tracks.push({
+                                                    title: self.path.basename(tracks[i]).replace(self.path.extname(tracks[i]), ''),
+                                                    artist: '',
+                                                    year: '',
+                                                    favorite: false,
+                                                    duration: TimeDate.buildTimer1(Number(data.format.duration)),
+                                                    image: 'assets/multimedia/images/tracks/image.jpg',
+                                                    path: tracks[i]
+                                                });
+                                                if (i === 0 && vue.currentTrack.path.length === 0) {
+                                                    vue.currentTrack = {
+                                                        path: vue.tracks[0].path,
+                                                        title: vue.tracks[0].title,
+                                                        image:  vue.tracks[0].image,
+                                                        info: ''
+                                                    };
+                                                }
+                                            }
                                         });
                                     });
-                                if (i === 0 && vue.currentTrack.path.length === 0) {
-                                    vue.currentTrack = {
-                                        path: vue.tracks[0].path,
-                                        title: vue.tracks[0].title,
-                                        image: vue.tracks[0].picture,
-                                        info: vue.tracks[0].artist === '' && vue.tracks[0].year === '' ? '' : vue.tracks[0].artist === '' ? vue.tracks[0].year : vue.tracks[0].year === '' ? vue.tracks[0].artist : `${vue.tracks[0].artist}  -   ${vue.tracks[0].year}`
-                                    };
-                                }
                             }
                         }
                     }

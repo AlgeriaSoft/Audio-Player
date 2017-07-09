@@ -126,10 +126,14 @@ a.btn.is-played i.material-icons {
     height: var(--player-cover-height);
 }
 
-.player-body .player-cover img {
+.player-body .player-cover div {
     transform: scale(1, 1);
     transform-origin: 0% 0%;
     height: var(--player-cover-height);
+    background-image: url('../multimedia/images/background.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
 }
 
 .player-body .player-audio-header {
@@ -373,7 +377,7 @@ a.btn.is-played i.material-icons {
     height: 110px;
 }
 
-.player.active-list .player-cover img {
+.player.active-list .player-cover div {
     border-radius: 20%;
     transform-origin: 10% 10%;
     transform: scale(0.251, 0.3);

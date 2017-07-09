@@ -58,7 +58,7 @@
                 <audio id='audio' :src='currentTrack.path' class='hide'></audio>
                 <div class='player-body-inner'>
                     <div class='player-cover'>
-                        <img src='assets/multimedia/images/tracks/image.jpg'>
+                        <div v-bind:style='{ "background-image": "url(" + currentTrack.image + ")"}'></div>
                     </div>
                     <div class='row clearfix'></div>
                     <div class='row clearfix'></div>
