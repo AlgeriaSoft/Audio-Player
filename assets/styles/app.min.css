@@ -133,7 +133,7 @@ a.btn.is-played i.material-icons {
     height: var(--player-cover-height);
 }
 
-.player-body .player-cover div.background {
+.player-body .player-cover div.image {
     background-image: url('../multimedia/images/background.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;

@@ -22,7 +22,6 @@
     "analyze": true,
     "license": "AGPLV3.0",
     "dependencies": {
-        "jsmediatags": "^3.6.1",
-        "music-metadata": "^0.7.3"
+        "music-metadata": "^0.7.4"
     }
 }
