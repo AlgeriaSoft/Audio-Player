@@ -14,14 +14,20 @@ class App_Events {
                 $(e.currentTarget).toggleClass('active');
             });
         });
-        new Vue({
+        this.vue = new Vue({
             el: '#player',
             data: {
+                ctx: null,
                 trackId: 0,
                 tracks: [],
+                source: null,
+                context: null,
+                canvas: null,
+                analyser: null,
                 progress: null,
                 isLoaded: false,
                 isPlaying: false,
+                frameAnimation: null,
                 currentTime: '00:00',
                 audioDuration: '00:00',
                 currentTimetooltip: '00:00',
@@ -172,8 +178,6 @@ class App_Events {
                 },
                 togglePlay: function(e) {
                     if ($('#audio').attr('src') !== '' && ($('#audio')[0].paused || $('#audio')[0].currentTime === 0)) {
-                        this.isPlaying = true;
-                        $('#audio').trigger('play');
                         if (!this.isLoaded) {
                             this.isLoaded = true;
                             this.progress.removeAttr('disabled');
@@ -187,8 +191,11 @@ class App_Events {
                                 this.currentTime = TimeDate.buildTimer1($(e.currentTarget)[0].currentTime);
                                 this.progress[0].noUiSlider.set($(e.currentTarget)[0].currentTime);
                             }.bind(this));
+                            this.audioVisualization();
                             this.audioDuration = TimeDate.buildTimer1($('#audio')[0].duration);
                         }
+                        this.isPlaying = true;
+                        $('#audio').trigger('play');
                     } else {
                         this.isPlaying = false;
                         $('#audio').trigger('pause');
@@ -202,7 +209,42 @@ class App_Events {
                     this.audioDuration = '00:00';
                     $('#audio')[0].currentTime = 0;
                     this.progress.attr('disabled', true);
+                    cancelAnimationFrame(this.frameAnimation);
+                },
+                audioVisualization: function() {
+                    let vue = this;
+                    if (this.context !== null) {
+                        console.log(this.context);
+                        console.log(this.source);
+                        console.log(this.analyser);
+                        this.context.close();
+                        this.source.disconnect();
+                        this.analyser.disconnect();
+                    }
+                    this.context = new AudioContext();
+                    this.source = this.context.createMediaElementSource($('#audio')[0]);
+                    this.analyser = this.context.createAnalyser();
+                    this.canvas = $('#canvas');
+                    this.ctx = this.canvas[0].getContext('2d');
+                    this.source.connect(this.analyser);
+                    this.analyser.connect(this.context.destination);
+                    frameLooper();
 
+                    function frameLooper() {
+                        vue.frameAnimation = requestAnimationFrame(frameLooper);
+                        let fbc_array = new Uint8Array(vue.analyser.frequencyBinCount),
+                            bars = 100;
+                        vue.analyser.getByteFrequencyData(fbc_array);
+                        vue.ctx.clearRect(0, 0, vue.canvas[0].width, vue.canvas[0].height);
+                        vue.ctx.fillStyle = '#00CCFF';
+                        for (let i = 0; i < bars; i++) {
+                            let bar_x = i * 3,
+                                bar_width = 2,
+                                bar_height = -(fbc_array[i] / 2);
+                            //  fillRect( x, y, width, height ) // Explanation of the parameters below
+                            vue.ctx.fillRect(bar_x, vue.canvas[0].height, bar_width, bar_height);
+                        }
+                    }
                 }
             }
         });

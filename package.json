@@ -14,6 +14,9 @@
         "win32"
     ],
     "main": "index.js",
+    "scripts": {
+        "build": "webpack"
+    },
     "bin": {},
     "engines": {
         "node": ">=8.1.2"
@@ -22,6 +25,7 @@
     "analyze": true,
     "license": "AGPLV3.0",
     "dependencies": {
-        "music-metadata": "^0.7.4"
-    }
+        "music-metadata": "^0.7.5"
+    },
+    "devDependencies": {}
 }
