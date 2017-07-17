@@ -27,8 +27,8 @@
 
 - [About](#About)
 - [Features](#Features)
-- [Supported Platforms](#Supported Platforms)
-- [Build from source](#Build from source)
+- [Supported Platforms](#Supported-Platforms)
+- [Build from source](#Build-from-source)
 - [Downloads](#Downloads)
 - [Copyright and license](#copyright-and-license)
 
