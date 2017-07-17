@@ -16,9 +16,9 @@
     "main": "index.js",
     "scripts": {
         "webpack": "webpack",
-        "build:win":"",
-        "build:lunix":"",
-        "build:mac":""
+        "mac": "webpack && electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets-dev/multimedia/images/icon.icns --prune=true --out=release-builds",
+        "win": "webpack && electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets-dev/multimedia/images/icon.ico --prune=true --out=release-builds --version-string.CompanyName='AlgeriaSoft' --version-string.FileDescription='Audio Player v1.0.0' --version-string.ProductName='Audio Player v1.0.0'",
+        "linux": "webpack && electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --icon=assets-dev/multimedia/images/icon.png --prune=true --out=release-builds"
     },
     "bin": {},
     "engines": {
@@ -31,11 +31,13 @@
         "music-metadata": "^0.7.5"
     },
     "devDependencies": {
+        "asar": "^0.13.0",
         "babel-core": "^6.25.0",
         "babel-loader": "^7.1.1",
         "babel-preset-latest": "^6.24.1",
         "babel-preset-stage-3": "^6.24.1",
         "css-loader": "^0.28.4",
+        "electron-packager": "^8.7.2",
         "extract-text-webpack-plugin": "^3.0.0",
         "file-loader": "^0.11.2",
         "hammerjs": "^2.0.8",

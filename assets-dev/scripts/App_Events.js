@@ -8,7 +8,7 @@ import Vue from '../vendor/vue.min.js';
 import TimeDate from './API/TimeDate';
 import Validator from './API/Validator';
 import UserException from './API/UserException';
-import * from '../vendor/materialize/css/materialize.min.css';
+import css from '../vendor/materialize/css/materialize.min.css';
 import icons from '../vendor/materialize/fonts/iconfont/material-icons.css';
 import nouisliderCss from '../vendor/noUiSlider/nouislider.css';
 import css1 from '../vendor/animate.min.css';
