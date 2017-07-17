@@ -5,10 +5,10 @@ let path = require('path'),
 module.exports = {
     context: __dirname,
     entry: {
-        'app.min.js': './assets/scripts/App_Events.js'
+        'app.min.js': './assets-dev/scripts/App_Events.js'
     },
     output: {
-        path: path.join(__dirname, 'assets/dist'),
+        path: path.join(__dirname, 'assets'),
         filename: '[name]'
     },
     module: {
