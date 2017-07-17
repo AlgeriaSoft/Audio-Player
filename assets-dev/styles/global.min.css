@@ -1,0 +1,87 @@
+:root {
+    --password-toggle-top: -5px;
+    --password-toggle-right: 2px;
+    --password-toggle-font-size: 2rem;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: var(--blue-2);
+}
+
+.pace-load {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple-4);
+    z-index: 1000;
+}
+
+.no-select {
+    cursor: default !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-pointer {
+    pointer-events: none!important;
+    box-shadow: none!important;
+    color: #9F9F9F !important;
+    cursor: default!important;
+}
+
+.no-pointer:hover {
+    box-shadow: none !important;
+    color: #9F9F9F !important;
+}
+
+.background {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 1;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.password-toggle {
+    cursor: pointer;
+    position: absolute;
+    top: var(--password-toggle-top);
+    right: var(--password-toggle-right);
+    font-size: var(--password-toggle-font-size);
+}
+
+.password-toggle:hover {
+    color: var(--pink-4);
+}
+
+.spliter {
+    border: 2px solid var(--white);
+    position: absolute;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0;
+    left: 0;
+}
