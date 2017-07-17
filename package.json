@@ -15,7 +15,10 @@
     ],
     "main": "index.js",
     "scripts": {
-        "webpack": "webpack"
+        "webpack": "webpack",
+        "build:win":"",
+        "build:lunix":"",
+        "build:mac":""
     },
     "bin": {},
     "engines": {
