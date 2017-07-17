@@ -25,11 +25,11 @@
   
 ## Table of Contents
 
-- [About](#About)
-- [Features](#Features)
-- [Supported Platforms](#Supported-Platforms)
-- [Build from source](#Build-from-source)
-- [Downloads](#Downloads)
+- [About](#about)
+- [Features](#features)
+- [Supported Platforms](#supported-Platforms)
+- [Build from source](#build-from-source)
+- [Downloads](#downloads)
 - [Copyright and license](#copyright-and-license)
 
 
