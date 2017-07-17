@@ -1,6 +1,6 @@
 <p align="center">
   <a href="">
-    <img src="assets/multimedia/images/icon.png" width="150">
+    <img src="assets-dev/multimedia/images/icon.png" width="150">
   </a>
 
   <h3 align="center">Audio Player</h3>
