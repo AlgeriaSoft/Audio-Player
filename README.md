@@ -63,21 +63,23 @@ npm install
 Next install
 
 ```bash
-`npm install -g electron-packager asar
+npm install -g electron-packager asar
 ```
 
 
 Buids commands:
 
-- ```bash 
-npm run win (for windows).
+- For window : 
+```bash 
+npm run win
 ```
-- ```bash
-npm run linux` (for linux).
+- For linux : 
+```bash
+npm run linux
 ```
-
-- ```bash
-npm run macOS (for OS X also known as macOS).
+For OS X also known as macOS :
+```bash
+npm run macOS
 ```
 
 ## Downloads
