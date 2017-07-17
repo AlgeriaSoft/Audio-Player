@@ -25,13 +25,15 @@
   
 ## Table of Contents
 
-- [Quickstart](#Quickstart)
+- [About](#About)
 - [Features](#Features)
+- [Supported Platforms](#Supported Platforms)
+- [Build](#Build)
 - [Downloads](#Downloads)
 - [Copyright and license](#copyright-and-license)
 
 
-## Quickstart:
+## About:
 Electron audio player with play list v1.0.0
 
 ## Features:
@@ -43,6 +45,27 @@ Electron audio player with play list v1.0.0
 | Player list            | 80%           | Play list with loop && random.    |
   
 
+
+## Supported Platforms
+Audio Player is known to run on the following host platforms:
+
+- Windows (32/64 bit)
+- OS X (also known as macOS)
+- Linux (x86/x86_64)
+
+## Build
+First install npm packages
+
+``npm install
+Next install
+
+`` npm install -g electron-packager asar
+
+Buids commands:
+
+- npm run win (for windows).
+- npm run linux (for linux).
+- npm run macOS (for OS X also known as macOS).
 
 ## Downloads
 

@@ -1,3 +1,4 @@
-node_modules/
-bower_components/
 assets/
+node_modules/
+release-builds/
+bower_components/
