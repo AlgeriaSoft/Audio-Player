@@ -56,17 +56,29 @@ Audio Player is known to run on the following host platforms:
 ## Build
 First install npm packages
 
-`npm install`
+```bash
+npm install
+```
 
 Next install
 
-`npm install -g electron-packager asar`
+```bash
+`npm install -g electron-packager asar
+```
+
 
 Buids commands:
 
-- `npm run win` (for windows).
-- `npm run linux` (for linux).
-- `npm run macOS` (for OS X also known as macOS).
+- ```bash 
+npm run win (for windows).
+```
+- ```bash
+npm run linux` (for linux).
+```
+
+- ```bash
+npm run macOS (for OS X also known as macOS).
+```
 
 ## Downloads
 
