@@ -10,26 +10,24 @@
         module = undefined;
     }
     </script>
-    <script src='assets/vendor/traceur/traceur.min.js'></script>
-    <script src='assets/vendor/systemjs/system.js'></script>
-    <script src='assets/vendor/jquery/jquery.min.js'></script>
-    <script src='assets/vendor/materialize/js/materialize.min.js'></script>
-    <script src='assets/vendor/noUiSlider/nouislider.min.js'></script>
-    <script src='assets/vendor/vue.min.js'></script>
-    <script src='assets/scripts/config.min.js'></script>
-    <script src='assets/scripts/module/app.min.js'></script>
+    <!-- <script src='assets/vendor/jquery/jquery.min.js'></script> -->
+    <!-- <script src='assets/vendor/materialize/js/materialize.min.js'></script> -->
+    <!-- <script src='assets/vendor/noUiSlider/nouislider.min.js'></script> -->
+    <!-- <script src='assets/vendor/vue.min.js'></script> -->
+    <script src='assets/dist/app.min.js'></script>
     <script>
     if (window.module) module = window.module;
     </script>
-    <link rel='stylesheet' href='assets/vendor/materialize/css/materialize.min.css'>
-    <link rel='stylesheet' href='assets/vendor/materialize/fonts/iconfont/material-icons.css'>
-    <link rel='stylesheet' href='assets/vendor/noUiSlider/nouislider.css'>
-    <link rel='stylesheet' href='assets/vendor/animate.min.css'>
-    <link rel='stylesheet' href='assets/styles/variables.min.css'>
-    <link rel='stylesheet' href='assets/styles/scrollbar.min.css'>
-    <link rel='stylesheet' href='assets/styles/global.min.css'>
-    <link rel='stylesheet' href='assets/styles/window.min.css'>
-    <link rel='stylesheet' href='assets/styles/app.min.css'>
+    <!-- <link rel='stylesheet' href='assets/vendor/materialize/css/materialize.min.css'> -->
+    <!-- <link rel='stylesheet' href='assets/vendor/materialize/fonts/iconfont/material-icons.css'> -->
+    <!-- <link rel='stylesheet' href='assets/vendor/noUiSlider/nouislider.css'> -->
+    <!-- <link rel='stylesheet' href='assets/vendor/animate.min.css'> -->
+    <!-- <link rel='stylesheet' href='assets/styles/variables.min.css'> -->
+    <!-- <link rel='stylesheet' href='assets/styles/scrollbar.min.css'> -->
+    <!-- <link rel='stylesheet' href='assets/styles/global.min.css'> -->
+    <!-- <link rel='stylesheet' href='assets/styles/window.min.css'> -->
+    <!-- <link rel='stylesheet' href='assets/styles/app.min.css'> -->
+    <link rel='stylesheet' href='assets/dist/app.min.css'>
 </head>
 
 <body class='no-select window black'>
@@ -57,8 +55,9 @@
             <div class='player-body'>
                 <audio id='audio' :src='currentTrack.path' class='hide'></audio>
                 <div class='player-cover'>
-                    <div class='image hide' v-bind:style='{ "background-image": "url(" + currentTrack.image + ")"}'></div>
-                    <div id='canvas-container' class='canvas-container'>
+                    <div class='image' v-if='currentTrack.image===""'></div>
+                    <div class='image' v-else v-bind:style='{ "background-image": "url(" + currentTrack.image + ")"}'></div>
+                    <div id='canvas-container' class='canvas-container hide'>
                         <canvas id='canvas'></canvas>
                     </div>
                 </div>
