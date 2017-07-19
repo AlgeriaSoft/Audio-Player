@@ -127,7 +127,7 @@ npm run macOS
 For All :
 ```bash
 npm run all
-
+```
 ## Downloads
 
 Download the latest build from the [official download site](https://algeriasoft.github.io/Website/audio-player/download.html).
