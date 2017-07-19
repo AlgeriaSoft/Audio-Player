@@ -49,7 +49,7 @@ Electron audio player with play list v1.0.0
 - :heavy_check_mark: Create own music list.
 - Read/edit mp3 metadata.
 - Download music from URL.
-- Change application style.
+- Change application theme.
 - Add automatic/manual sort.
 - :heavy_check_mark: Favorite/unfavorite music.
 - :heavy_check_mark: Audio Visualization effect.
@@ -75,7 +75,7 @@ Electron audio player with play list v1.0.0
 | Create own music list                                   | 100%          | All planned feature implemented   |
 | Read/edit mp3 metadata                                  | 50%           | Edit mp3 metadata                 |
 | Download music from URL                                 | 0%            |                                   |                               
-| Change application style                                | 0%            |                                   |
+| Change application theme                                | 0%            |                                   |
 | Favorite/unfavorite music                               | 100%          | All planned feature implemented   |
 | Audio visualization effect                              | 100%          | All planned feature implemented   |
 | Add sort automatique/manual                             | 0%            |                                   |
