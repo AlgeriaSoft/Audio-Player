@@ -16,7 +16,7 @@
     "main": "index.js",
     "scripts": {
         "mac": "webpack && electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets-dev/multimedia/images/icon.icns --prune=true --out=release-builds --ignore=assets-dev --ignore=.gitignore --ignore=.travis.yml --ignore=LICENSE --ignore=README.md --ignore=webpack.config.js --electronVersion=1.6.11",
-        "win": "webpack &&  electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets-dev/multimedia/images/icon.ico --prune=true --out=release-builds --ignore=assets-dev --ignore=.gitignore --ignore=.travis.yml --ignore=LICENSE --ignore=README.md --ignore=webpack.config.js --electronVersion=1.6.11 --version-string.CompanyName='AlgeriaSoft' --version-string.FileDescription='Audio Player v1.0.0' --version-string.ProductName='Audio Player v1.0.0'",
+        "win": "webpack &&  electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets-dev/multimedia/images/icon.ico --prune=true --out=release-builds --ignore=assets-dev --ignore=.gitignore --ignore=.travis.yml --ignore=LICENSE --ignore=README.md --ignore=webpack.config.js --electronVersion=1.6.11 --version-string.CompanyName=AlgeriaSoft --version-string.FileDescription=AudioPlayer --version-string.ProductName=AudioPlayer",
         "linux": "webpack &&  electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --icon=assets-dev/multimedia/images/icon.png --prune=true --out=release-builds --ignore=assets-dev --ignore=.gitignore --ignore=.travis.yml --ignore=LICENSE --ignore=README.md --ignore=webpack.config.js --electronVersion=1.6.11"
     },
     "bin": {},

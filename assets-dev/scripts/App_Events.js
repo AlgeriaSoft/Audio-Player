@@ -8,15 +8,15 @@ import Vue from '../vendor/vue.min.js';
 import TimeDate from './API/TimeDate';
 import Validator from './API/Validator';
 import UserException from './API/UserException';
-import css from '../vendor/materialize/css/materialize.min.css';
+import materializeCss from '../vendor/materialize/css/materialize.min.css';
 import icons from '../vendor/materialize/fonts/iconfont/material-icons.css';
 import nouisliderCss from '../vendor/noUiSlider/nouislider.css';
-import css1 from '../vendor/animate.min.css';
-import css2 from '../styles/variables.min.css';
-import css3 from '../styles/scrollbar.min.css';
-import css4 from '../styles/global.min.css';
-import css5 from '../styles/window.min.css';
-import css6 from '../styles/app.min.css';
+import animateCss from '../vendor/animate.min.css';
+import variablesCss from '../styles/variables.min.css';
+import scrollbarCss from '../styles/scrollbar.min.css';
+import globalCss from '../styles/global.min.css';
+import windowCss from '../styles/window.min.css';
+import appCss from '../styles/app.min.css';
 
 class App_Events {
     constructor() {

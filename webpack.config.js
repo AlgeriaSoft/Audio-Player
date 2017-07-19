@@ -24,18 +24,17 @@ module.exports = {
         }, {
             test: /\.css$/,
             use: ExtractTextPlugin.extract({
-                // fallback: 'style-loader',
                 use: {
                     loader: 'css-loader',
                     options: {
-                        minimize: true
+                        minimize: true,
+                        sourceMap: true
                     }
                 }
             })
         }, {
             test: /\.(jpe?g|png|gif|svg|mp3|mp4|eot|ijmap|ttf|woff|woff2)$/i,
             loader: 'file-loader',
-            // loader: 'file-loader?name=[path][name].[ext]',
             query: {
                 useRelativePath: process.env.NODE_ENV === 'production'
             }
@@ -64,12 +63,9 @@ module.exports = {
     devtool: 'source-map',
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': '"production"'
-        }),
-        new ExtractTextPlugin('app.min.css'),
-        new webpack.optimize.UglifyJsPlugin({
-            mangle: false,
-            sourceMap: true
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -77,6 +73,16 @@ module.exports = {
             'window.$': 'jquery',
             'window.jQuery': 'jquery',
             'Hammer': 'hammerjs/hammer'
+        }),
+        new ExtractTextPlugin('app.min.css'),
+        new webpack.optimize.MinChunkSizePlugin({}),
+        new webpack.optimize.UglifyJsPlugin({
+            mangle: false,
+            // compress: {
+            //     comment: false
+            // },
+            sourceMap: true,
+            comments: false
         })
     ]
 };

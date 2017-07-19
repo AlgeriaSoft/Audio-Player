@@ -1,7 +1,9 @@
-const { app, BrowserWindow, Tray, Menu, globalShortcut } = require('electron'),
+const url = require('url'),
     path = require('path'),
-    url = require('url');
+    { app, BrowserWindow, Tray, Menu, globalShortcut } = require('electron');
 let win, tray;
+
+
 
 app.on('ready', createWindow);
 
@@ -40,7 +42,6 @@ function createWindow() {
         },
         { type: 'separator' }, {
             label: 'Play',
-            // icon: path.join(__dirname, 'assets/play.png'),
             click() {}
 
         }, {
@@ -92,9 +93,9 @@ function createWindow() {
 
     ]);
 
-    tray.setToolTip('Audio Player v1.0.0')
+    tray.setToolTip('Audio Player v1.0.0');
     tray.setContextMenu(contextMenu);
-    win.setMenu(null);
+    // win.setMenu(null);
     win.loadURL(url.format({
         pathname: path.join(__dirname, '/index.html'),
         protocol: 'file:',

@@ -26,25 +26,65 @@
 ## Table of Contents
 
 - [About](#about)
-- [Features](#features)
+- [Features for application](#features-for-application)
+- [Features for development](#features-for-development)
+- [Development status](#development-status)
 - [Supported Platforms](#supported-Platforms)
 - [Build from source](#build-from-source)
 - [Downloads](#downloads)
 - [Copyright and license](#copyright-and-license)
 
 
-## About:
+## About
 Electron audio player with play list v1.0.0
 
-## Features:
-| Feature                | Status        | Notes                             |
-|:-----------------------|:-------------:|:----------------------------------|
-| Add WebPack Support    | 80%           | Minimze file size.                |
-| Read mp3 metadata      | 100%          | All planned feature implemented.  |
-| Audio Visualization    | 100%          | All planned feature implemented.  |
-| Player list            | 80%           | Play list with loop && random.    |
-  
+## Features for application
 
+- Audio effect.
+- Sound record.
+- Edit music list.
+- Search for music.
+- Automatique update.
+- Read music from URL.
+- Create own music list.
+- Read/edit mp3 metadata.
+- Download music from URL.
+- Change application style.
+- Add automatic/manual sort.
+- Favorite/unfavorite music.
+- Audio Visualization effect.
+- Play music list with random or by order.
+- Add musics by dragging or by open file dialog.
+
+## Features for development
+
+- Add WebPack support to project.
+- Add Electron packaging support.
+- Add Electron app installer Support.
+
+## Development status
+
+| Feature                                                 | Status        | Notes                             |
+|:--------------------------------------------------------|:-------------:|:----------------------------------|
+| Audio effect                                            | 0%            |                                   |
+| Sound record                                            | 0%            |                                   |
+| Edit music list                                         | 100%          | All planned feature implemented.  |
+| Search for music                                        | 0%            |                                   |
+| Automatique update                                      | 0%            |                                   |
+| Read music from URL                                     | 0%            |                                   |
+| Create own music list                                   | 0%            |                                   |
+| Read/edit mp3 metadata                                  | 50%           | Edit mp3 metadata.                |
+| Download music from URL                                 | 100%          | All planned feature implemented.  |
+| Change application style                                | 0%            |                                   |
+| Favorite/unfavorite music                               | 100%          | All planned feature implemented.  |
+| Audio visualization effect                              | 100%          | All planned feature implemented.  |
+| Add sort automatique/manual                             | 0%            |                                   |
+| Play music list with random or by order                 | 0%            |                                   |
+| Add musics by dragging or by open file dialog           | 50%           |                                   |
+| Add WebPack support to project                          | 80%           | Minimze file size.                |
+| Add Electron packaging support                          | 100%          | All planned feature implemented.  |
+| Add Electron application installer Support              | 0%            |                                   |
+  
 
 ## Supported Platforms
 Audio Player is known to run on the following host platforms:
@@ -54,20 +94,19 @@ Audio Player is known to run on the following host platforms:
 - Linux (x86/x86_64)
 
 ## Build from source
-First install npm packages
+First install dependencies npm packages 
 
 ```bash
 npm install
 ```
 
-Next install
+Next install electron-packager and electron archive 
 
 ```bash
 npm install -g electron-packager asar
 ```
 
-
-Buids commands:
+Finaly choose your buid command:
 
 For window : 
 ```bash 
@@ -81,6 +120,10 @@ For OS X also known as macOS :
 ```bash
 npm run macOS
 ```
+
+For All :
+```bash
+npm run all
 
 ## Downloads
 
