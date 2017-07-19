@@ -42,8 +42,8 @@ Electron audio player with play list v1.0.0
 
 - Audio effect.
 - Sound record.
-- :heavy_check_mark: Edit music list.
-:heavy_check_mark: Search for music.
+- Edit music list :heavy_check_mark:.
+- Search for music.
 - Automatique update.
 - Read music from URL.
 - Create own music list.
