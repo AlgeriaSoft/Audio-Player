@@ -59,7 +59,7 @@ Electron audio player with play list v1.0.0
 ## Features for development
 
 - Add WebPack support to project.
-- :heavy_check_ Add Electron packaging support.
+- :heavy_check_mark: Add Electron packaging support.
 - Add Electron app installer Support.
 
 ## Progress
