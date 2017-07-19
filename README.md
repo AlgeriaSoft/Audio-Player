@@ -46,20 +46,20 @@ Electron audio player with play list v1.0.0
 - Search for music.
 - Automatique update.
 - Read music from URL.
-- Create own music list.
+- :heavy_check_mark: Create own music list.
 - Read/edit mp3 metadata.
 - Download music from URL.
 - Change application style.
 - Add automatic/manual sort.
-- Favorite/unfavorite music.
-- Audio Visualization effect.
+- :heavy_check_mark: Favorite/unfavorite music.
+- :heavy_check_mark: Audio Visualization effect.
 - Play music list with random or by order.
 - Add musics by dragging or by open file dialog.
 
 ## Features for development
 
 - Add WebPack support to project.
-- Add Electron packaging support.
+- :heavy_check_ Add Electron packaging support.
 - Add Electron app installer Support.
 
 ## Progress
@@ -72,9 +72,9 @@ Electron audio player with play list v1.0.0
 | Search for music                                        | 0%            |                                   |
 | Automatique update                                      | 0%            |                                   |
 | Read music from URL                                     | 0%            |                                   |
-| Create own music list                                   | 0%            |                                   |
+| Create own music list                                   | 100%          | All planned feature implemented   |
 | Read/edit mp3 metadata                                  | 50%           | Edit mp3 metadata                 |
-| Download music from URL                                 | 100%          | All planned feature implemented   |
+| Download music from URL                                 | 0%            |                                   |                               
 | Change application style                                | 0%            |                                   |
 | Favorite/unfavorite music                               | 100%          | All planned feature implemented   |
 | Audio visualization effect                              | 100%          | All planned feature implemented   |
