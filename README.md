@@ -1,28 +1,25 @@
-<p align="center">
-  <a href="">
-    <img src="assets-dev/multimedia/images/icon.png" width="150">
-  </a>
-
-  <h3 align="center">Audio Player</h3>
-
-<p align="center">
-    <br>
-    <br>
-    <a href="https://travis-ci.org/AlgeriaSoft/Audio-Player">
-      <img src="https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master" alt="Travis CI badge">
-    </a>
-    <a href="https://david-dm.org/AlgeriaSoft/Audio-Player">
-      <img src="https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg" alt="dependencies Status badge">
-      </a>
-    <a href="https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies">
-      <img src="https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg" alt="devDependency Status badge">
-    </a>
-     <a href="https://gitter.im/Audio-Player/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
-        <img src="https://badges.gitter.im/Audio-Player/Lobby.svg" alt="gitter badge">
-    </a>
-
+<p align="center" style="text-align:center"> 
+    <h3 align="center">Audio Player</h3>
 </p>
-  
+<p align="center" style="text-align:center"> 
+    <img lign="center" src="assets-dev/multimedia/images/icon.png" width="150">
+</p>
+<p align="center">
+    <a href="https://gitter.im/AlgeriaSoft/Audio-Player?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-              `               badge&amp;utm_content=body_badge">
+        <img src="https://badges.gitter.im/AlgeriaSoft/Audio-Player.svg" alt="Join the chat at" />
+    </a>
+    <a href="https://github.com/AlgeriaSoft/Audio-Player/releases"><img src="https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg" alt="Github Release" /></a>
+    <a href=""><img src="https://img.shields.io/github/downloads/AlgeriaSoft/Audio-Player/total.svg" alt="Github All Releases" /></a>
+    <a href="https://github.com/AlgeriaSoft/Audio-Player/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license" /></a>
+    <a href="https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player"><img src="https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player.svg" alt="GitHub version" /></a>
+    <a href="https://david-dm.org/AlgeriaSoft/Audio-Player"><img src="https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg" alt="dependencies status" /></a>
+    <a href="https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies"><img src="https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg" alt="devDependency status" /></a>
+    <a href="https://travis-ci.org/AlgeriaSoft/Audio-Player"><img src="https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master" alt="Build Status" /></a>
+    <a href="https://codeclimate.com/github/AlgeriaSoft/Audio-Player"><img src="https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/gpa.svg" alt="Code Climate" /></a>
+    <a href="https://coveralls.io/github/AlgeriaSoft/Audio-Player?branch=master"><img src="https://coveralls.io/repos/github/AlgeriaSoft/Audio-Player/badge.svg?branch=master" alt="Coverage Status" /></a>
+    <a href="http://isitmaintained.com/project/AlgeriaSoft/Audio-Player" title="Average time to resolve an issue"><img src="http://isitmaintained.com/badge/resolution/AlgeriaSoft/Audio-Player.svg" alt="Average time to resolve an issue" /></a>
+</p>
+
 ## Table of Contents
 
 - [About](#about)
@@ -38,14 +35,13 @@
 
 ## About
 
-Run Google Play Music as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because.
+Run Audio player as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because.
 
 Developed by [KHALED LAKEHAL][1].
 
 Audio Player is a trademark of AlgeriaSoft Inc.
 
-[1]: https://www.facebook.com/khaledLakhel1993
-
+[1]:https://www.facebook.com/khaledLakhel1993.
 
 ## Features for application
 
@@ -148,4 +144,24 @@ npm run all
 
 ## Copyright and license
 
-Code copyright 2017 AlgeriaSoft. Code released under the GNU Affero General Public License v3.0.
+MIT License
+
+Copyright (c) 2017 KHALED LAKEHAL
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
