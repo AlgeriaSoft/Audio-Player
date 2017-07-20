@@ -29,31 +29,37 @@
 - [Features for application](#features-for-application)
 - [Features for development](#features-for-development)
 - [Progress](#progress)
-- [Supported Platforms](#supported-Platforms)
-- [Build from source](#build-from-source)
+- [OS Support](#os-support)
 - [Downloads](#downloads)
+- [Development](#Development)
+- [Dev Requirements](#dev-requirements)
 - [Copyright and license](#copyright-and-license)
 
 
 ## About
-Electron audio player with play list v1.0.0
+
+Run Google Play Music as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because.
+
+Developed by KHALED LAKEHAL.
+
+Audio Player is a trademark of AlgeriaSoft Inc.
 
 ## Features for application
 
 - Audio effect.
 - Sound record.
-- :heavy_check_mark: Edit music list.
+- :heavy_check_mark: Edit playlist.
 - Search for music.
 - Automatique update.
 - Read music from URL.
-- :heavy_check_mark: Create own music list.
+- :heavy_check_mark: Create own playlist.
 - Read/edit mp3 metadata.
 - Download music from URL.
 - Change application theme.
 - Add automatic/manual sort.
 - :heavy_check_mark: Favorite/unfavorite music.
 - :heavy_check_mark: Audio Visualization effect.
-- Play music list with random or by order.
+- Play playlist with random or by order.
 - Add musics by dragging or by open file dialog.
 
 ## Features for development
@@ -68,18 +74,18 @@ Electron audio player with play list v1.0.0
 |:--------------------------------------------------------|:-------------:|:----------------------------------|
 | Audio effect                                            | 0%            |                                   |
 | Sound record                                            | 0%            |                                   |
-| Edit music list                                         | 100%          | All planned feature implemented   |
+| Edit playlist                                           | 100%          | All planned feature implemented   |
 | Search for music                                        | 0%            |                                   |
 | Automatique update                                      | 0%            |                                   |
 | Read music from URL                                     | 0%            |                                   |
-| Create own music list                                   | 100%          | All planned feature implemented   |
+| Create own playlist                                     | 100%          | All planned feature implemented   |
 | Read/edit mp3 metadata                                  | 50%           | Edit mp3 metadata                 |
 | Download music from URL                                 | 0%            |                                   |                               
 | Change application theme                                | 0%            |                                   |
 | Favorite/unfavorite music                               | 100%          | All planned feature implemented   |
 | Audio visualization effect                              | 100%          | All planned feature implemented   |
 | Add sort automatique/manual                             | 0%            |                                   |
-| Play music list with random or by order                 | 0%            |                                   |
+| Play playlist with random or by order                   | 0%            |                                   |
 | Add musics by dragging or by open file dialog           | 50%           |                                   |
 | Add WebPack support to project                          | 80%           | Minimze file size                 |
 | Add Electron packaging support                          | 100%          | All planned feature implemented   |
@@ -87,7 +93,7 @@ Electron audio player with play list v1.0.0
 | Project status                                          | 37.78%        |                                   |
   
 
-## Supported Platforms
+## OS Support
 
 Audio Player is known to run on the following host platforms:
 
@@ -95,43 +101,47 @@ Audio Player is known to run on the following host platforms:
 - OS X (also known as macOS)
 - Linux (x86/x86_64)
 
-## Build from source
+## Downloads
 
-First install dependencies npm packages 
+Head over to our [official download website](https://algeriasoft.github.io/Website/audio-player/download.html) to download the latest release for your platform.
+
+## Development
+
+To get started just run the following commands
+
 
 ```bash
+git clone git@github.com:AlgeriaSoft/Audio-Player.git or git clone https://github.com/AlgeriaSoft/Audio-Player.git
+npm install -g electron-packager asar
 npm install
 ```
 
-Next install electron-packager and electron archive 
 
-```bash
-npm install -g electron-packager asar
-```
+To build the installers / release packages you need to run, you can only build a platforms installer from that platform.
 
-Finaly choose your buid command:
 
-For window : 
 ```bash 
+# Windows
 npm run win
-```
-For linux : 
-```bash
+
+# Linux
+
 npm run linux
-```
-For OS X also known as macOS :
-```bash
+
+# OS X also known as macOS
+
 npm run macOS
-```
+# All
 
-For All :
-```bash
 npm run all
+
 ```
-## Downloads
 
-Download the latest build from the [official download site](https://algeriasoft.github.io/Website/audio-player/download.html).
+## Dev Requirements
 
+- Node.js (Recommend 8.x.x)
+- Electron (1.6.11)
+- NPM (5.x.x)
 
 ## Copyright and license
 
