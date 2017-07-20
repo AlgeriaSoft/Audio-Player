@@ -1,6 +1,8 @@
 
+ ![](assets-dev/multimedia/images/icon.png)
+ 
  [![Github Release](https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg)](https://github.com/AlgeriaSoft/Audio-Player/releases)
- [![Github All Releases](https://img.shields.io/github/downloads/AlgeriaSoft/Audio-Player/total.svg	)](https://github.com/AlgeriaSoft/Audio-Player/releases)
+ [![Github Release](https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg)](https://github.com/AlgeriaSoft/Audio-Player/releases)
  [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/AlgeriaSoft/Audio-Player/blob/master/LICENSE)
 [![GitHub version](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player.svg)](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player)
  [![dependencies status](https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player)
@@ -29,6 +31,7 @@
 
 
 ## About
+![](http://samuel.ninja/img/gpmdp_screen.gif)
 
 Run Google Play Music as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because.
 
