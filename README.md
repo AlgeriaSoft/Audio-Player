@@ -1,12 +1,19 @@
-<div style="text-align:center">
+<p align="center">
+ <h3 align="center">Audio Player</h3> 
+  <a href="">
+   <img src="assets-dev/multimedia/images/icon.png" width="150">
+ </a>
+ </p>
 
-![](assets-dev/multimedia/images/icon.ico)
+<p align="center">
+<a href="https://github.com/AlgeriaSoft/Audio-Player/releases"><img src="https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg" alt="Github Release" /></a>
+ <a href=""><img src="https://img.shields.io/github/downloads/AlgeriaSoft/Audio-Player/total.svg" alt="Github All Releases" /></a>
+ <a href="https://github.com/AlgeriaSoft/Audio-Player/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license" /></a><a href="https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player"><img src="https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player.svg" alt="GitHub version" /></a><a href="https://david-dm.org/AlgeriaSoft/Audio-Player"><img src="https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg" alt="dependencies status" /></a><a href="https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies"><img src="https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg" alt="devDependency status" /></a><a href="https://travis-ci.org/AlgeriaSoft/Audio-Player"><img src="https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master" alt="Build Status" /></a><a href="https://codeclimate.com/github/AlgeriaSoft/Audio-Player"><img src="https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/gpa.svg" alt="Code Climate" /></a><a href="https://coveralls.io/github/AlgeriaSoft/Audio-Player?branch=master"><img src="https://coveralls.io/repos/github/AlgeriaSoft/Audio-Player/badge.svg?branch=master" alt="Coverage Status" /></a><a href="http://isitmaintained.com/project/AlgeriaSoft/Audio-Player" title="Average time to resolve an issue"><img src="http://isitmaintained.com/badge/resolution/AlgeriaSoft/Audio-Player.svg" alt="Average time to resolve an issue" /></a></p>
+
  
- [![Github Release](https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg)](https://github.com/AlgeriaSoft/Audio-Player/releases)
- [![Github All Releases](https://img.shields.io/github/downloads/AlgeriaSoft/Audio-Player/total.svg)]()
- [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/AlgeriaSoft/Audio-Player/blob/master/LICENSE)[![GitHub version](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player.svg)](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player)[![dependencies status](https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player)[![devDependency status](https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies)[![Build Status](https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master)](https://travis-ci.org/AlgeriaSoft/Audio-Player)[![Code Climate](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/gpa.svg)](https://codeclimate.com/github/AlgeriaSoft/Audio-Player)[![Coverage Status](https://coveralls.io/repos/github/AlgeriaSoft/Audio-Player/badge.svg?branch=master)](https://coveralls.io/github/AlgeriaSoft/Audio-Player?branch=master)[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/AlgeriaSoft/Audio-Player.svg)](http://isitmaintained.com/project/AlgeriaSoft/Audio-Player "Average time to resolve an issue")
 
-</div>
+
+
 ## Table of Contents
 
 - [About](#about)
