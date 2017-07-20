@@ -5,7 +5,11 @@ os:
   - windows
   - osx
   - linux
-
+scripts:
+ - npm run osx
+ - npm run win
+ - npm run linux
+ - npm run all
 cache:
     directories:
         - node_modules
