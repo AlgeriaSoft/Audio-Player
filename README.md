@@ -31,7 +31,7 @@
 - [Progress](#progress)
 - [OS Support](#os-support)
 - [Downloads](#downloads)
-- [Development](#Development)
+- [Development](#development)
 - [Dev Requirements](#dev-requirements)
 - [Copyright and license](#copyright-and-license)
 
@@ -40,9 +40,12 @@
 
 Run Google Play Music as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because.
 
-Developed by KHALED LAKEHAL.
+Developed by [KHALED LAKEHAL][1].
 
 Audio Player is a trademark of AlgeriaSoft Inc.
+
+[1]: https://www.facebook.com/khaledLakhel1993
+
 
 ## Features for application
 
