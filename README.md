@@ -6,8 +6,6 @@
  [![dependencies status](https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player)
  [![devDependency status](https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies)
  [![Build Status](https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master)](https://travis-ci.org/AlgeriaSoft/Audio-Player)
-
-  
 [![Code Climate](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/gpa.svg)](https://codeclimate.com/github/AlgeriaSoft/Audio-Player)   
 [![Coverage Status](https://coveralls.io/repos/github/AlgeriaSoft/Audio-Player/badge.svg?branch=master)](https://coveralls.io/github/AlgeriaSoft/Audio-Player?branch=master)
 [![Test Coverage](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/coverage.svg)](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/coverage)
