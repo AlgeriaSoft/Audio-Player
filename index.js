@@ -1,7 +1,9 @@
-const { app, BrowserWindow, Tray, Menu, globalShortcut } = require('electron'),
+const url = require('url'),
     path = require('path'),
-    url = require('url');
+    { app, BrowserWindow, Tray, Menu, globalShortcut } = require('electron');
 let win, tray;
+
+
 
 app.on('ready', createWindow);
 
@@ -13,31 +15,19 @@ app.on('activate', () => {
     if (win === null) createWindow();
 });
 
-// app.setJumpList([{
-//     type: 'custom',
-//     name: 'Recent Files',
-//     items: [
-//         { type: 'file', path: 'E:\\KHALED\\Din\\Anachid\\1.mp3' },
-//     ]
-// }]);
-
 function createWindow() {
-    // globalShortcut.register('CommandOrControl+X', () => {
-    //     console.log('CommandOrControl+X is pressed')
-    // })
-
     win = new BrowserWindow({
         width: 360,
-        height: 650,
+        height: 660,
         center: true,
         resizable: false,
         frame: false,
-        icon: path.join(__dirname, 'assets/multimedia/images/icon.png')
+        icon: path.join(__dirname, 'assets/f1c3675a0f8f7128d114548e2da81a8c.png')
     });
-    tray = new Tray(path.join(__dirname, 'assets/multimedia/images/icon.png'));
+    tray = new Tray(path.join(__dirname, 'assets/f1c3675a0f8f7128d114548e2da81a8c.png'));
     const contextMenu = Menu.buildFromTemplate([{
             label: 'Hide Audio Player',
-            // icon: path.join(__dirname, 'assets/multimedia/images/icon.png'),
+            // icon: path.join(__dirname, 'assets/f1c3675a0f8f7128d114548e2da81a8c.png'),
             click() {
                 if (win.isVisible()) {
                     contextMenu.items[0].label = 'Hide Audio Player';
@@ -52,20 +42,19 @@ function createWindow() {
         },
         { type: 'separator' }, {
             label: 'Play',
-            // icon: path.join(__dirname, 'assets/multimedia/images/play.png'),
             click() {}
 
         }, {
             label: 'Stop',
-            // icon: path.join(__dirname, 'assets/multimedia/images/stop.png'),
+            // icon: path.join(__dirname, 'assets/stop.png'),
             click() {}
         }, {
             label: 'Previous',
-            // icon: path.join(__dirname, 'assets/multimedia/images/previous.png'),
+            // icon: path.join(__dirname, 'assets/previous.png'),
             click() {}
         }, {
             label: 'Next',
-            // icon: path.join(__dirname, 'assets/multimedia/images/next.png'),
+            // icon: path.join(__dirname, 'assets/next.png'),
             click() {}
         },
         { type: 'separator' }, {
@@ -83,20 +72,20 @@ function createWindow() {
         },
         { type: 'separator' }, {
             label: 'Increase Volume',
-            // icon: path.join(__dirname, 'assets/multimedia/images/upVolume.png'),
+            // icon: path.join(__dirname, 'assets/upVolume.png'),
             click() {}
         }, {
             label: 'Decrease Volume',
-            // icon: path.join(__dirname, 'assets/multimedia/images/downVolume.png'),
+            // icon: path.join(__dirname, 'assets/downVolume.png'),
             click() {}
         }, {
             label: 'Mute',
-            // icon: path.join(__dirname, 'assets/multimedia/images/mute.png'),
+            // icon: path.join(__dirname, 'assets/mute.png'),
             click() {}
         },
         { type: 'separator' }, {
             label: 'Exit',
-            // icon: path.join(__dirname, 'assets/multimedia/images/exit.png'),
+            // icon: path.join(__dirname, 'assets/exit.png'),
             click() {
                 app.exit(0);
             }
@@ -104,7 +93,7 @@ function createWindow() {
 
     ]);
 
-    tray.setToolTip('Audio Player v1.0.0')
+    tray.setToolTip('Audio Player v1.0.0');
     tray.setContextMenu(contextMenu);
     // win.setMenu(null);
     win.loadURL(url.format({
@@ -112,7 +101,6 @@ function createWindow() {
         protocol: 'file:',
         slashes: true
     }));
-
     win.on('closed', () => {
         win = null
     });

@@ -24,9 +24,6 @@
 </p>
   
 ## Table of Contents
-
-[![Join the chat at https://gitter.im/AlgeriaSoft/Audio-Player](https://badges.gitter.im/AlgeriaSoft/Audio-Player.svg)](https://gitter.im/AlgeriaSoft/Audio-Player?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 - [About](#about)
 - [Features for application](#features-for-application)
 - [Features for development](#features-for-development)
@@ -98,6 +95,18 @@ Audio Player is a trademark of AlgeriaSoft Inc.
 ## OS Support
 
 Audio Player is known to run on the following host platforms:
+
+- Windows (32/64 bit)
+- OS X (also known as macOS)
+- Linux (x86/x86_64)
+
+## Downloads
+
+Head over to our [official download website](https://algeriasoft.github.io/Website/audio-player/download.html) to download the latest release for your platform.
+
+## Development
+
+=======
 
 - Windows (32/64 bit)
 - OS X (also known as macOS)

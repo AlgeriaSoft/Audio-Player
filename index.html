@@ -10,27 +10,11 @@
         module = undefined;
     }
     </script>
-    <script src='assets/vendor/traceur/traceur.min.js'></script>
-    <script src='assets/vendor/systemjs/system.js'></script>
-    <script src='assets/vendor/jquery/jquery.min.js'></script>
-    <script src='assets/vendor/materialize/js/materialize.min.js'></script>
-    <script src='assets/vendor/noUiSlider/nouislider.min.js'></script>
-    <script src='assets/vendor/jsmediatags.min.js'></script>
-    <script src='assets/vendor/vue.min.js'></script>
-    <script src='assets/scripts/config.min.js'></script>
-    <script src='assets/scripts/module/app.min.js'></script>
+    <script src='assets/app.min.js'></script>
     <script>
     if (window.module) module = window.module;
-    </script>
-    <link rel='stylesheet' href='assets/vendor/materialize/css/materialize.min.css'>
-    <link rel='stylesheet' href='assets/vendor/materialize/fonts/iconfont/material-icons.css'>
-    <link rel='stylesheet' href='assets/vendor/noUiSlider/nouislider.css'>
-    <link rel='stylesheet' href='assets/vendor/animate.min.css'>
-    <link rel='stylesheet' href='assets/styles/variables.min.css'>
-    <link rel='stylesheet' href='assets/styles/scrollbar.min.css'>
-    <link rel='stylesheet' href='assets/styles/global.min.css'>
-    <link rel='stylesheet' href='assets/styles/window.min.css'>
-    <link rel='stylesheet' href='assets/styles/app.min.css'>
+    </script>  
+    <link rel='stylesheet' href='assets/app.min.css'>
 </head>
 
 <body class='no-select window black'>
@@ -57,63 +41,63 @@
             </div>
             <div class='player-body'>
                 <audio id='audio' :src='currentTrack.path' class='hide'></audio>
-                <div class='player-body-inner'>
-                    <div class='player-cover'>
-                        <div></div>
+                <div class='player-cover'>
+                    <div class='image' v-if='currentTrack.image===""'></div>
+                    <div class='image' v-else v-bind:style='{ "background-image": "url(" + currentTrack.image + ")"}'></div>
+                    <div id='canvas-container' class='canvas-container hide'>
+                        <canvas id='canvas'></canvas>
                     </div>
-                    <div class='row clearfix'></div>
-                    <div class='row clearfix'></div>
-                    <div class='player-audio-header'>
-                        <h5 class='player-audio-title'>{{currentTrack.title}}</h5>
-                        <h6 class='player-audio-info'>{{currentTrack.artist}} - {{currentTrack.year}}</h6>
+                </div>
+                <div class='row clearfix'></div>
+                <div class='player-audio-header'>
+                    <h5 class='player-audio-title'>{{currentTrack.title}}</h5>
+                    <h6 class='player-audio-info'>{{currentTrack.info}}</h6>
+                </div>
+                <div class='row clearfix'></div>
+                <div class='row clearfix'></div>
+                <div class='player-audio-seek'>
+                    <div id='time-current' class='time left'>{{currentTime}}</div>
+                    <div class='audio-seek left'>
+                        <div id='audio-seek-range'></div>
                     </div>
-                    <div class='row clearfix'></div>
-                    <div class='row clearfix'></div>
-                    <div class='player-audio-seek'>
-                        <div id='time-current' class='time left'>{{currentTime}}</div>
-                        <div class='audio-seek left'>
-                            <div id='audio-seek-range'></div>
-                        </div>
-                        <div id='time-end' class='time left'>{{audioDuration}}</div>
-                    </div>
-                    <div class='row clearfix'></div>
-                    <div class='row clearfix'></div>
-                    <div class='player-audio-controller'>
-                        <a class='btn btn-flat waves-effect waves-light left'><i class='material-icons'>skip_previous</i></a>
-                        <a class='btn btn-flat waves-effect waves-light left'><i class='material-icons'>fast_rewind</i></a>
-                        <a id='play' class='btn btn-flat waves-effect waves-light left no-active' v-show='!isPlaying' v-on:click='togglePlay'><i class='material-icons'>play_arrow</i></a>
-                        <a id='pause' class='btn btn-flat waves-effect waves-light left no-active' v-show='isPlaying' v-on:click='togglePlay'><i class='material-icons'>pause</i></a>
-                        <a class='btn btn-flat waves-effect waves-light left'><i class='material-icons'>fast_forward</i></a>
-                        <a class='btn btn-flat waves-effect waves-light left'><i class='material-icons'>skip_next</i></a>
-                    </div>
-                    <div class='row clearfix'></div>
-                    <div class='row clearfix'></div>
-                    <div id='player-tracks' class='player-tracks hide'>
-                        <div class='fixed-action-btn vertical'>
-                            <a class='btn-floating btn-flat waves-effect waves-light'>
-                                <i class='large material-icons'>mode_edit</i>
-                            </a>
-                            <ul>
-                                <li v-on:click='add'><a class='btn-flat btn-floating waves-effect waves-light green darken-2'><i class='material-icons'>add</i></a></li>
-                                <li v-on:click='save'><a class='btn-flat btn-floating waves-effect waves-light pink darken-2'><i class='material-icons'>save</i></a></li>
-                                <li v-on:click='clearAll'><a class='btn-flat btn-floating waves-effect waves-light blue darken-2'><i class='material-icons'>clear</i></a></li>
-                            </ul>
-                        </div>
-                        <table class='centered highlight'>
-                            <tbody>
-                                <tr v-for='track in tracks'>
-                                    <td>{{track.id}}</td>
-                                    <td>{{track.title}}</td>
-                                    <td>{{track.duration}}</td>
-                                    <td v-on:click='toggleFavorite(track.path)'>
-                                        <i v-if='track.favorite' class='material-icons'>favorite</i>
-                                        <i v-else class='material-icons'>favorite_border</i>
-                                    </td>
-                                    <td v-on:click='deleteSong(track.path)'><i class='material-icons'>clear</i></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <div id='time-end' class='time left'>{{audioDuration}}</div>
+                </div>
+                <div class='row clearfix'></div>
+                <div class='player-audio-controller'>
+                    <a class='btn btn-flat waves-effect waves-light left'><i class='material-icons'>skip_previous</i></a>
+                    <a class='btn btn-flat waves-effect waves-light left'><i class='material-icons'>fast_rewind</i></a>
+                    <a id='play' class='btn btn-flat waves-effect waves-light left no-active' v-show='!isPlaying' v-on:click='togglePlay'><i class='material-icons'>play_arrow</i></a>
+                    <a id='pause' class='btn btn-flat waves-effect waves-light left no-active' v-show='isPlaying' v-on:click='togglePlay'><i class='material-icons'>pause</i></a>
+                    <a class='btn btn-flat waves-effect waves-light left'><i class='material-icons'>fast_forward</i></a>
+                    <a class='btn btn-flat waves-effect waves-light left'><i class='material-icons'>skip_next</i></a>
+                </div>
+                <div class='row clearfix'></div>
+                <div class='row clearfix'></div>
+                <div class='fixed-action-btn vertical'>
+                    <a class='btn-floating btn-flat waves-effect waves-light'>
+                        <i class='large material-icons'>mode_edit</i>
+                    </a>
+                    <ul>
+                        <li v-on:click='add'><a class='btn-flat btn-floating waves-effect waves-light green darken-2'><i class='material-icons'>add</i></a></li>
+                        <li v-on:click='save'><a class='btn-flat btn-floating waves-effect waves-light pink darken-2'><i class='material-icons'>save</i></a></li>
+                        <li v-on:click='clearAll'><a class='btn-flat btn-floating waves-effect waves-light blue darken-2'><i class='material-icons'>clear</i></a></li>
+                    </ul>
+                </div>
+                <div id='player-tracks' class='player-tracks hide'>
+                    <table class='centered highlight'>
+                        <tbody>
+                            <tr v-for='track in tracks'>
+                                <td>{{getId(track.path)}}</td>
+                                <td>{{track.title}}</td>
+                                <td>{{track.duration}}</td>
+                                <td>
+                                    <i v-if='track.favorite' class='material-icons' v-on:click='toggleFavorite(track.path)'>favorite</i>
+                                    <i v-else class='material-icons' v-on:click='toggleFavorite(track.path)'>favorite_border</i>
+                                </td>
+                                <td><i class='material-icons' v-on:click='deleteSong(track.path)'>clear</i></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class='player-footer'>
