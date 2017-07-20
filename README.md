@@ -1,27 +1,32 @@
-<p align="center">
-  <a href="">
-    <img src="assets-dev/multimedia/images/icon.png" width="150">
-  </a>
 
-  <h3 align="center">Audio Player</h3>
+ [![Github Release](https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg)](https://github.com/AlgeriaSoft/Audio-Player/releases)
+ 
+ [![Github All Releases](https://img.shields.io/github/downloads/AlgeriaSoft/Audio-Player/total.svg	)](https://github.com/AlgeriaSoft/Audio-Player/releases)
+ 
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
-<p align="center">
-    <br>
-    <br>
-    <a href="https://travis-ci.org/AlgeriaSoft/Audio-Player">
-      <img src="https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master" alt="Travis CI badge">
-    </a>
-    <a href="https://david-dm.org/AlgeriaSoft/Audio-Player">
-      <img src="https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg" alt="dependencies Status badge">
-      </a>
-    <a href="https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies">
-      <img src="https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg" alt="devDependency Status badge">
-    </a>
-     <a href="https://gitter.im/Audio-Player/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
-        <img src="https://badges.gitter.im/Audio-Player/Lobby.svg" alt="gitter badge">
-    </a>
+ [![GitHub version](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player.svg)](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player)
+ 
+ [![dependencies status](https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player)
+ 
+  [![devDependency status](https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies)
+  
+[![Code Climate](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/gpa.svg)](https://codeclimate.com/github/AlgeriaSoft/Audio-Player)   
 
-</p>
+ [![Coverage Status](https://coveralls.io/repos/github/AlgeriaSoft/Audio-Player/badge.svg?branch=master)](https://coveralls.io/github/AlgeriaSoft/Audio-Player?branch=master)
+
+[![Test Coverage](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/coverage.svg)](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/coverage)
+
+[![Issue Count](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/issue_count.svg)](https://codeclimate.com/github/AlgeriaSoft/Audio-Player)
+  
+  [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/AlgeriaSoft/Audio-Player.svg)](http://isitmaintained.com/project/AlgeriaSoft/Audio-Player "Average time to resolve an issue")
+  
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/AlgeriaSoft/Audio-Player.svg)](http://isitmaintained.com/project/AlgeriaSoft/Audio-Player "Percentage of issues still open")
+
+[![Build Status](https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master)](https://travis-ci.org/AlgeriaSoft/Audio-Player)
+
+
+
   
 ## Table of Contents
 
@@ -40,12 +45,9 @@
 
 Run Google Play Music as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because.
 
-Developed by [KHALED LAKEHAL][1].
+Developed by KHALED LAKEHAL.
 
 Audio Player is a trademark of AlgeriaSoft Inc.
-
-[1]: https://www.facebook.com/khaledLakhel1993
-
 
 ## Features for application
 
