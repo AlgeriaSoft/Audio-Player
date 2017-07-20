@@ -31,7 +31,7 @@
 
 
 ## About
-![](http://samuel.ninja/img/gpmdp_screen.gif)
+<--![](http://samuel.ninja/img/gpmdp_screen.gif)-->
 
 Run Google Play Music as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because.
 
