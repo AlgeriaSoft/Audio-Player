@@ -1,30 +1,19 @@
 
  [![Github Release](https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg)](https://github.com/AlgeriaSoft/Audio-Player/releases)
- 
  [![Github All Releases](https://img.shields.io/github/downloads/AlgeriaSoft/Audio-Player/total.svg	)](https://github.com/AlgeriaSoft/Audio-Player/releases)
- 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
-
- [![GitHub version](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player.svg)](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player)
- 
+ [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![GitHub version](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player.svg)](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player)
  [![dependencies status](https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player)
- 
-  [![devDependency status](https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies)
+ [![devDependency status](https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies)
+ [![Build Status](https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master)](https://travis-ci.org/AlgeriaSoft/Audio-Player)
+
   
 [![Code Climate](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/gpa.svg)](https://codeclimate.com/github/AlgeriaSoft/Audio-Player)   
-
- [![Coverage Status](https://coveralls.io/repos/github/AlgeriaSoft/Audio-Player/badge.svg?branch=master)](https://coveralls.io/github/AlgeriaSoft/Audio-Player?branch=master)
-
+[![Coverage Status](https://coveralls.io/repos/github/AlgeriaSoft/Audio-Player/badge.svg?branch=master)](https://coveralls.io/github/AlgeriaSoft/Audio-Player?branch=master)
 [![Test Coverage](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/coverage.svg)](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/coverage)
-
 [![Issue Count](https://codeclimate.com/github/AlgeriaSoft/Audio-Player/badges/issue_count.svg)](https://codeclimate.com/github/AlgeriaSoft/Audio-Player)
-  
-  [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/AlgeriaSoft/Audio-Player.svg)](http://isitmaintained.com/project/AlgeriaSoft/Audio-Player "Average time to resolve an issue")
-  
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/AlgeriaSoft/Audio-Player.svg)](http://isitmaintained.com/project/AlgeriaSoft/Audio-Player "Percentage of issues still open")
-
-[![Build Status](https://travis-ci.org/AlgeriaSoft/Audio-Player.svg?branch=master)](https://travis-ci.org/AlgeriaSoft/Audio-Player)
-
+ [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/AlgeriaSoft/Audio-Player.svg)](http://isitmaintained.com/project/AlgeriaSoft/Audio-Player "Average time to resolve an issue")
+ [![Percentage of issues still open](http://isitmaintained.com/badge/open/AlgeriaSoft/Audio-Player.svg)](http://isitmaintained.com/project/AlgeriaSoft/Audio-Player "Percentage of issues still open")
 
 
   
