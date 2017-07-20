@@ -25,7 +25,7 @@
     },
     "private": true,
     "analyze": true,
-    "license": "AGPLV3.0",
+    "license": "MIT",
     "dependencies": {
         "music-metadata": "^0.7.5"
     },
