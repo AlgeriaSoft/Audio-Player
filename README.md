@@ -1,3 +1,9 @@
+<p align="center" style="text-align:center"> 
+    <h3 align="center">Audio Player</h3>
+</p>
+<p align="center" style="text-align:center"> 
+    <img lign="center" src="assets-dev/multimedia/images/icon.png" width="150">
+</p>
 <p align="center">
     <a href="https://github.com/AlgeriaSoft/Audio-Player/releases"><img src="https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg" alt="Github Release" /></a>
     <a href=""><img src="https://img.shields.io/github/downloads/AlgeriaSoft/Audio-Player/total.svg" alt="Github All Releases" /></a>
@@ -28,9 +34,11 @@
 
 Run Audio player as a standalone desktop app. Never again will you have to hunt through your tabs to pause your music, or stop listening to your favourite song because.
 
-Developed by KHALED LAKEHAL.
+Developed by [KHALED LAKEHAL][1].
 
 Audio Player is a trademark of AlgeriaSoft Inc.
+
+[1]:https://www.facebook.com/khaledLakhel1993.
 
 ## Features for application
 
