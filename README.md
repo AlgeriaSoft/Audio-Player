@@ -1,5 +1,5 @@
 
- ![](assets-dev/multimedia/images/icon.png)
+ ![](assets-dev/multimedia/images/icon.ico)
  
  [![Github Release](https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg)](https://github.com/AlgeriaSoft/Audio-Player/releases)
  [![Github Release](https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg)](https://github.com/AlgeriaSoft/Audio-Player/releases)
