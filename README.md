@@ -1,7 +1,7 @@
 
  [![Github Release](https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg)](https://github.com/AlgeriaSoft/Audio-Player/releases)
  [![Github All Releases](https://img.shields.io/github/downloads/AlgeriaSoft/Audio-Player/total.svg	)](https://github.com/AlgeriaSoft/Audio-Player/releases)
- [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/AlgeriaSoft/Audio-Player/edit/master/LICENSE)
+ [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/AlgeriaSoft/Audio-Player/blob/master/LICENSE)
 [![GitHub version](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player.svg)](https://badge.fury.io/gh/AlgeriaSoft%2FAudio-Player)
  [![dependencies status](https://david-dm.org/AlgeriaSoft/Audio-Player/status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player)
  [![devDependency status](https://david-dm.org/AlgeriaSoft/Audio-Player/dev-status.svg)](https://david-dm.org/AlgeriaSoft/Audio-Player#info=devDependencies)
