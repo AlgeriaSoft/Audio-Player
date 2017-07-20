@@ -5,6 +5,9 @@
     <img lign="center" src="assets-dev/multimedia/images/icon.png" width="150">
 </p>
 <p align="center">
+    <a href="https://gitter.im/AlgeriaSoft/Audio-Player?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-              `               badge&amp;utm_content=body_badge">
+        <img src="https://badges.gitter.im/AlgeriaSoft/Audio-Player.svg" alt="Join the chat at" />
+    </a>
     <a href="https://github.com/AlgeriaSoft/Audio-Player/releases"><img src="https://img.shields.io/github/release/AlgeriaSoft/Audio-Player.svg" alt="Github Release" /></a>
     <a href=""><img src="https://img.shields.io/github/downloads/AlgeriaSoft/Audio-Player/total.svg" alt="Github All Releases" /></a>
     <a href="https://github.com/AlgeriaSoft/Audio-Player/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license" /></a>
